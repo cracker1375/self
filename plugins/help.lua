@@ -128,7 +128,7 @@ function run(msg, matches)
 مثال : !clean msg 100
 
 ➖➖➖➖➖➖
-web : 😎Tarfand.Pro 😎
+ID : 😎@B_Hat😎
 ➖➖➖➖➖➖]]
     if matches[1] == 'help' and is_sudo(msg) then
       send_large_msg("user#id"..msg.from.id, help)      
