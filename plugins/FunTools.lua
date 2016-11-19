@@ -215,7 +215,7 @@ end
     
       if matches[1]:lower() == "photo" and is_sudo(msg) then
      redis:get("sticker:photo")
-    send_large_msg(receiver, 'By Tarfand.pro :)', ok_cb, false)
+    send_large_msg(receiver, 'By Mr.error', ok_cb, false)
         load_document(msg.reply_id, toimage, msg)
     end
 end
@@ -229,7 +229,7 @@ end
        end
       if matches[1]:lower() == "sticker" and is_sudo(msg) then
      redis:get("photo:sticker")  
-    send_large_msg(receiver, 'By Tarfand.pro :)', ok_cb, false)
+    send_large_msg(receiver, 'By Mr.error', ok_cb, false)
         load_photo(msg.reply_id, tosticker, msg)
     end
 end
@@ -312,5 +312,5 @@ patterns = {
 run = run,
 }
 
---by Tarfand.pro :)
---By @CliApi
+--by Mr.error
+--By @B_Hat
