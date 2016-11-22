@@ -52,8 +52,8 @@
       .."Or colors through decimals: (\"255-192-203\" is pink)"
   },
   patterns = {
-    '^!qr "(%w+)" "(%w+)" (.+)$',
-    "^!qr (.+)$"
+    '^[!/]qr "(%w+)" "(%w+)" (.+)$',
+    "^[!/]qr (.+)$"
   },
   run = run
 }
