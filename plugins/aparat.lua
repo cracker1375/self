@@ -14,8 +14,8 @@ return {
 	description = "aparat videos",
 	usage = "aparat search",
 	patterns = {
-		"^[/!]aparat$",
-		"^(aparat)$"
+		"^[!/](aparat) (.+)$",
+		"^(aparat) (.+)$"
 		},
 	run = run
 }
