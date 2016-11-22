@@ -1,7 +1,7 @@
 do
     
 function run(msg, matches)
-  local help = [[Beyond Self Commands
+  local ghelp = [[Beyond Self Commands
 
 🔴دستورات سرگرمی👇
 
@@ -57,7 +57,7 @@ function run(msg, matches)
 ➖➖➖➖➖➖
 ID : 😎@B_Hat😎
 ➖➖➖➖➖➖]]
-    if matches[1] == 'help' and is_sudo(msg) then
+    if matches[1] == 'ghelp' and is_sudo(msg) then
       send_large_msg("user#id"..msg.from.id, help)      
    return 'Help was sent in your private message'
     end
