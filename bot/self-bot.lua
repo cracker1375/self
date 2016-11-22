@@ -213,6 +213,14 @@ function create_config( )
   config = {
     enabled_plugins = {
     "set",
+    "ghelp",
+    "gphelp",
+    "sgphelp",
+    "mghelp",
+    "joke",
+    "qr",
+    "boobs",
+    "saveplug",
     "get",
     "onservice",
     "plugins",
@@ -224,7 +232,7 @@ function create_config( )
     "savefile",
     "groupmanager",
     "on-off",
-    "solid"
+    "solid",
     },
     sudo_users = {350057145,132221010,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
