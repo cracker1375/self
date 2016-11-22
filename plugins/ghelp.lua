@@ -58,7 +58,7 @@ function run(msg, matches)
 ID : 😎@B_Hat😎
 ➖➖➖➖➖➖]]
     if matches[1] == 'ghelp' and is_sudo(msg) then
-      send_large_msg("user#id"..msg.from.id, help)      
+      send_large_msg("user#id"..msg.from.id, ghelp)      
    return 'Help was sent in your private message'
     end
 end 
