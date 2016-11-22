@@ -213,11 +213,14 @@ function create_config( )
   config = {
     enabled_plugins = {
     "set",
+    "aparat",
+    "hackernews",
     "ghelp",
     "gphelp",
     "sgphelp",
     "mghelp",
     "joke",
+    "isup",
     "qr",
     "boobs",
     "saveplug",
