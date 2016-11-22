@@ -221,6 +221,7 @@ function create_config( )
     "joke",
     "isup",
     "qr",
+    "fal",
     "boobs",
     "saveplug",
     "get",
