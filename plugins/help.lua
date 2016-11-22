@@ -7,13 +7,13 @@ function run(msg, matches)
 🔹!mghelp
         
 🔴دستورات مدیریتی گروه👇
-!gphelp
+🔹!gphelp
         
 🔴فقط در سوپر گروه 👇
-!sgphelp
+🔹!sgphelp
         
 🔴دستورات سرگرمی👇
-!ghelp
+🔹!ghelp
 
 ➖➖➖➖➖➖
 ID : 😎@B_Hat😎
