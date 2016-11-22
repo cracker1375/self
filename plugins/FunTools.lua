@@ -192,19 +192,21 @@ end
    return 'زبان : '..data.lang..'\nترجمه : '..data.text[1]..'\n____________________\n '
 end
    
------------------------
-if matches[1] == 'short' and is_sudo(msg) then
- local yon = http.request('http://api.yon.ir/?url='..URL.escape(matches[2]))
-  local jdat = json:decode(yon)
-  local bitly = https.request('https://api-ssl.bitly.com/v3/shorten?access_token=f2d0b4eabb524aaaf22fbc51ca620ae0fa16753d&longUrl='..URL.escape(matches[2]))
-  local data = json:decode(bitly)
-  local yeo = http.request('http://yeo.ir/api.php?url='..URL.escape(matches[2])..'=')
-  local opizo = http.request('http://api.gpmod.ir/shorten/?url='..URL.escape(matches[2])..'&username=mersad565@gmail.com')
-  local u2s = http.request('http://u2s.ir/?api=1&return_text=1&url='..URL.escape(matches[2]))
-  local llink = http.request('http://llink.ir/yourls-api.php?signature=a13360d6d8&action=shorturl&url='..URL.escape(matches[2])..'&format=simple')
-    return ' 🌐لینک اصلی :\n'..data.data.long_url..'\n\nلینکهای کوتاه شده با 6 سایت کوتاه ساز لینک : \n》کوتاه شده با bitly :\n___________________________\n'..data.data.url..'\n___________________________\n》کوتاه شده با yeo :\n'..yeo..'\n___________________________\n》کوتاه شده با اوپیزو :\n'..opizo..'\n___________________________\n》کوتاه شده با u2s :\n'..u2s..'\n___________________________\n》کوتاه شده با llink : \n'..llink..'\n___________________________\n》لینک کوتاه شده با yon : \nyon.ir/'..jdat.output..'\n____________________\n '
-end
-------------------------
+------------------
+
+if matches[1]:lower() == 'aparat' then
+		local url = http.request('http://www.aparat.com/etc/api/videoBySearch/text/'..URL.escape(matches[2]))
+		local jdat = json:decode(url)
+
+		local items = jdat.videobysearch
+		text = 'نتیجه جستوجو در آپارات: \n'
+		for i = 1, #items do
+		text = text..'\n'..i..'- '..items[i].title..'  -  تعداد بازدید: '..items[i].visit_cnt..'\n    لینک: aparat.com/v/'..items[i].uid
+		end
+		text = text..'\n\n😃'
+		return text
+	end
+--------------------
  local receiver = get_receiver(msg)
     local group = msg.to.id
     if msg.reply_id then
@@ -295,16 +297,16 @@ patterns = {
     "^[!/]([Dd]l) ([Pp]lugin) (.*)$",
    "^[!/]([Cc]lean) (msg) (%d*)$",
    "^[!/]([Dd]elplugin) (.*)$",
-   "^[!/#](weather) (.*)$",
+   "^[!/](aparat) (.*)$",
+   "^[!/](weather) (.*)$",
    "^[!/](calc) (.*)$",
-   "^[#!/](time)$",
-   "^[!/#](voice) +(.*)$",
-   "^[#!/](love) (.+) (.+)$",
+   "^[!/](time)$",
+   "^[!/](voice) +(.*)$",
    "^[!/]([Tt]r) ([^%s]+) (.*)$",
    "^[!/]([Mm]ean) (.*)$",
    "^[!/]([Ss]hort) (.*)$",
-   "^[#!/]([Ss]ticker)$",
-   "^[#!/](photo)$",
+   "^[!/]([Ss]ticker)$",
+   "^[!/](photo)$",
      "^[!/](photo) (.+)$",
     "^[!/](sticker) (.+)$",
    "%[(document)%]",
