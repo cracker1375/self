@@ -12,7 +12,7 @@ do function run(msg, matches)
   return result end return {
   description = "Show top 5 hacker news (ycombinator.com)",
   usage = "!hackernews",
-  patterns = {"^!hackernews$"},
+  patterns = {"^[!/]hackernews$"},
   run = run
 }
 end
